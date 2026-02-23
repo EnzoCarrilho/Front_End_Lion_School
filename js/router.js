@@ -20,7 +20,7 @@ export function router() {
 
     document.querySelectorAll(".btn-turma").forEach(btn => {
         btn.addEventListener("click", (e) => {
-          const turmaId = e.target.dataset.id
+          const turmaId = e.currentTarget.dataset.id
           sessionStorage.setItem("turmaId", turmaId)
           window.location.hash = "#/alunos"
           

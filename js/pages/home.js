@@ -8,11 +8,11 @@ export function Home(){
         </div>
         <img src="./img/studant.svg" alt="">
         <div class="cursos">
-            <button class="btn-turma" id="1">
+            <button class="btn-turma" data-id="1">
                 <img src="./img/ds.svg" alt="">
                 <p>DS</p>
             </button>
-            <button class="btn-turma" id="2">
+            <button class="btn-turma" data-id="2">
                 <img src="./img/redes.svg" alt="">
                 <p>REDES</p>
             </button>
