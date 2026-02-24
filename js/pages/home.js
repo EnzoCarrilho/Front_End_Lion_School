@@ -1,4 +1,9 @@
 export function Home(){
+    
+    const pSair = document.getElementById('text-sair')
+    pSair.textContent = 'Sair'
+
+    
     return ` 
     
         <div class="devices">
@@ -18,4 +23,7 @@ export function Home(){
             </button>
         </div>
    `
+
 }
+
+

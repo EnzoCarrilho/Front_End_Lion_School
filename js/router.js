@@ -1,20 +1,20 @@
-import { Home } from "./pages/home.js";
-import { Alunos } from "./pages/alunos.js";
+import { Home } from "./pages/home.js"
+import { Turma } from "./pages/turma.js"
 
 export function router() {
-    const app = document.getElementById("app");
-    const pageStyle = document.getElementById("page-style");
-    const path = window.location.hash;
+    const app = document.getElementById("app")
+    const pageStyle = document.getElementById("page-style")
+    const path = window.location.hash
 
     switch (path) {
-        case "#/alunos":
-            app.innerHTML = Alunos();
-            pageStyle.href = "css/pages/alunos.css";
+        case "#/turma":
+            app.innerHTML = Turma()
+            pageStyle.href = "css/pages/alunos.css"
         break;
 
         default:
-            app.innerHTML = Home();
-            pageStyle.href = "css/pages/home.css"; 
+            app.innerHTML = Home()
+            pageStyle.href = "css/pages/home.css"
         
     }
 
@@ -22,7 +22,7 @@ export function router() {
         btn.addEventListener("click", (e) => {
           const turmaId = e.currentTarget.dataset.id
           sessionStorage.setItem("turmaId", turmaId)
-          window.location.hash = "#/alunos"
+          window.location.hash = "#/turma"
           
         })
         
