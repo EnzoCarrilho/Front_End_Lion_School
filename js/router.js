@@ -1,5 +1,6 @@
 import { Home } from "./pages/home.js"
 import { Turma } from "./pages/turma.js"
+import { Aluno } from "./pages/aluno.js"
 
 export function router() {
     const app = document.getElementById("app")
@@ -9,7 +10,12 @@ export function router() {
     switch (path) {
         case "#/turma":
             app.innerHTML = Turma()
-            pageStyle.href = "css/pages/alunos.css"
+            pageStyle.href = "css/pages/turma.css"
+        break;
+
+        case "#/aluno":
+            app.innerHTML = Aluno()
+            pageStyle.href = "css/pages/aluno.css"
         break;
 
         default:
@@ -25,6 +31,7 @@ export function router() {
           window.location.hash = "#/turma"
           
         })
+       
         
     })
 }

@@ -13,4 +13,5 @@ const alunos = require('../pages/alunos.js')
 // Teste da função que faz o fetch para o get de Alunos na API
 test('Validação do retorno da função que faz fetch na API:', () => {
     expect(alunos.getAllStudats(1).toBeInstanceOf(Array))
+    expect(alunos.getAllStudats(1).toBeInstanceOf(Array))
 })

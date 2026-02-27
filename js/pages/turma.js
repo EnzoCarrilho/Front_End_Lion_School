@@ -30,10 +30,16 @@ export async function Turma(){
     alunos.forEach(aluno => {
         criarCardAluno(aluno)
     })
-    
+
+    document.querySelectorAll('.card-aluno').forEach(card => {
+        card.addEventListener("click", () => {
+            const id = card.id
+            sessionStorage.setItem('id', id)
+            window.location.hash = '#/aluno'
+        })
+    })
   
 }
-
 
 export async function getAllStudats(id) {
     const url = `https://lion-school-phbo.onrender.com/alunos?curso_id=${id}`
@@ -46,6 +52,7 @@ function criarCardAluno(aluno){
     const divAlunos = document.querySelector('.alunos')
     const cardAluno = document.createElement('div')
     cardAluno.className = "card-aluno"
+    cardAluno.id = aluno.id
     const nome = document.createElement('p')
     nome.className = "nome"
     const imagem = document.createElement('img')
@@ -57,8 +64,10 @@ function criarCardAluno(aluno){
 
     nome.textContent = aluno.nome
     imagem.src = aluno.foto
-        
+ 
 }
+
+
 
 
 
